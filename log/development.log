@@ -166,3 +166,31 @@ Processing PostsController#show (for 127.0.0.1 at 2010-10-17 13:48:43) [GET]
 Rendering template within layouts/posts
 Rendering posts/show
 Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-10-17 14:48:53) [GET]
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-10-17 14:49:00) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-10-17 14:49:52) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"b4affb6627971f4725aa405f51d12e1e49d1709b", "post"=>{"body"=>"Now lets begin our project!", "title"=>"Hello,my teammates"}}
+  [4;36;1mPost Create (0.0ms)[0m   [0;1mINSERT INTO "posts" ("updated_at", "title", "body", "created_at") VALUES('2010-10-17 06:49:52', 'Hello,my teammates', 'Now lets begin our project!', '2010-10-17 06:49:52')[0m
+Redirected to #<Post:0x48e5830>
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-10-17 14:49:52) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/posts/2]
