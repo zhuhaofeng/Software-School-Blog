@@ -1,0 +1,168 @@
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20101017044820)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101017044820')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("posts")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-17 13:30:36) [GET]
+
+
+ActionController::RoutingError (No route matches "/post" with {:method=>:get}):
+    C:/Ruby186/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/rails-2.2.3/lib/webrick_server.rb:103:in `handle_dispatch'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/rails-2.2.3/lib/webrick_server.rb:74:in `service'
+    C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/rails-2.2.3/lib/webrick_server.rb:60:in `dispatch'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/rails-2.2.3/lib/commands/servers/webrick.rb:66
+    C:/Ruby186/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    C:/Ruby186/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    C:/Ruby186/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    C:/Ruby186/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering C:/Ruby186/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-10-17 13:44:57) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 469ms (View: 0, DB: 0) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-17 13:45:07) [GET]
+
+
+ActionController::RoutingError (No route matches "/post" with {:method=>:get}):
+    C:/Ruby186/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/routing/route_set.rb:390:in `recognize'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:112:in `dispatch_unlocked'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:125:in `dispatch'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `synchronize'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:124:in `dispatch'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:134:in `dispatch_cgi'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/dispatcher.rb:41:in `dispatch'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/rails-2.2.3/lib/webrick_server.rb:103:in `handle_dispatch'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/rails-2.2.3/lib/webrick_server.rb:74:in `service'
+    C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby186/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby186/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/rails-2.2.3/lib/webrick_server.rb:60:in `dispatch'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/rails-2.2.3/lib/commands/servers/webrick.rb:66
+    C:/Ruby186/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    C:/Ruby186/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/activesupport-2.2.3/lib/active_support/dependencies.rb:153:in `require'
+    C:/Ruby186/lib/ruby/gems/1.8/gems/rails-2.2.3/lib/commands/server.rb:49
+    C:/Ruby186/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    C:/Ruby186/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering C:/Ruby186/lib/ruby/gems/1.8/gems/actionpack-2.2.3/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-10-17 13:46:19) [GET]
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-10-17 13:46:22) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-10-17 13:47:12) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"b4affb6627971f4725aa405f51d12e1e49d1709b", "post"=>{"body"=>"Hello World\r\nFantasty", "title"=>"A new post on SSB"}}
+  [4;35;1mPost Create (0.0ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "created_at") VALUES('2010-10-17 05:47:12', 'A new post on SSB', 'Hello World
+Fantasty', '2010-10-17 05:47:12')[0m
+Redirected to #<Post:0x47d1d70>
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-10-17 13:47:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2010-10-17 13:48:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.0ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/posts/1/edit]
+
+
+Processing PostsController#update (for 127.0.0.1 at 2010-10-17 13:48:43) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"b4affb6627971f4725aa405f51d12e1e49d1709b", "post"=>{"body"=>"Hello World!\r\nFantasty!!", "title"=>"A new post on SSB"}, "id"=>"1"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+  [4;35;1mPost Update (15.6ms)[0m   [0mUPDATE "posts" SET "body" = 'Hello World!
+Fantasty!!', "updated_at" = '2010-10-17 05:48:43' WHERE "id" = 1[0m
+Redirected to #<Post:0x46c2c30>
+Completed in 31ms (DB: 16) | 302 Found [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-10-17 13:48:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/posts/1]
