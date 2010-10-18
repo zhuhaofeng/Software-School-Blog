@@ -194,3 +194,32 @@ Processing PostsController#show (for 127.0.0.1 at 2010-10-17 14:49:52) [GET]
 Rendering template within layouts/posts
 Rendering posts/show
 Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/posts/2]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-10-18 14:07:22) [GET]
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-10-18 14:11:01) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-10-18 14:11:40) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"0093c76722b3f7c7644603f1306116081447167a", "post"=>{"body"=>"no one will be your home\r\n", "title"=>"teachlost"}}
+  [4;35;1mPost Create (93.8ms)[0m   [0mINSERT INTO "posts" ("updated_at", "title", "body", "created_at") VALUES('2010-10-18 06:11:40', 'teachlost', 'no one will be your home
+', '2010-10-18 06:11:40')[0m
+Redirected to #<Post:0x48cb040>
+Completed in 125ms (DB: 94) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-10-18 14:11:41) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPost Load (0.0ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/posts/3]
